@@ -4,7 +4,7 @@
     for(const elm of filtre__bouton){
       elm.addEventListener("click", function(e){
         categorie = e.target.dataset.id;
-        console.log(categorie);
+
         extraire_cours();
 
         document.addEventListener("DOMContentLoaded", extraire_cours);
@@ -18,7 +18,7 @@
         }
 
         function afficherArticles(articles){
-          const conteneurCours = document.getElementById("contenu__restapi");
+          const conteneurCours = document.querySelector(".principal__conteneur");     
           conteneurCours.innerHTML = "";
 
           articles.forEach((article)=>{
