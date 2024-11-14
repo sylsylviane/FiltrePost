@@ -18,13 +18,13 @@ function charger_scripts_css(){
         $version_css
     ) ;  
 
-    wp_enqueue_script( //ici, pas de s à la fin de wp_enqueue_script
+    wp_enqueue_script( 
         "filtrepost",       
         plugin_dir_url(__FILE__) . "/js/filtrepost.js",
         array(),
         $version_js,
         true
-    )  ; 
+    ); 
 }
 
 add_action("wp_enqueue_scripts", "charger_scripts_css");
@@ -35,9 +35,9 @@ function genere_boutons(){
     foreach($categories as $element){
         $nom = $element->name;
         $id = $element->term_id;
-        $contenu .= '<button data-id="$id">$nom</button>';
+        $contenu .= '<button data-id="' . $id . '">' . $nom . '</button>';
     }
-    return '<div class="filtre__bouton>$contenu</div>';
+    return '<div class="filtre__bouton">' . $contenu . '</div>';
 }
 
 add_shortcode('extraire_cours', 'genere_boutons');
