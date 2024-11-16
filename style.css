@@ -1,1 +1,25 @@
-/*# sourceMappingURL=style.css.map */
+.filtre__bouton {
+  display: flex;
+  gap: 20px;
+}
+
+.filtre__bouton button {
+  background-color: var(--couleur3);
+  color: #000;
+  border-radius: 5px;
+  padding: 0.5em;
+  text-transform: uppercase;
+  transition-duration: 350ms;
+  border: none;
+}
+.filtre__bouton button:hover {
+  background-color: var(--couleur2);
+  color: #000;
+}
+
+.principal-conteneur-colonne {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}/*# sourceMappingURL=style.css.map */
