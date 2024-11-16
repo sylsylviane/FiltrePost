@@ -9,7 +9,7 @@
 
         document.addEventListener("DOMContentLoaded", extraire_cours);
 
-        function extraire_cours(){
+        function extraire_cours(){//changer l'adresse pour serveur distant
           fetch (`http://localhost/31w/wp-json/wp/v2/posts?categories=${categorie}&per_page=30`).then((response) => response.json()).then((data) => {
 
             console.log("Articles récupérés: ", data);
@@ -18,8 +18,9 @@
         }
 
         function afficherArticles(articles){
-          const conteneurCours = document.querySelector(".principal__conteneur");     
+          const conteneurCours = document.querySelector(".principal__conteneur"); 
           conteneurCours.innerHTML = "";
+          conteneurCours.className = "principal-conteneur principal-conteneur-colonne"
 
           articles.forEach((article)=>{
             const item = document.createElement("div");
