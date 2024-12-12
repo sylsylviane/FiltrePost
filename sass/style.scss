@@ -4,7 +4,7 @@
 }
 
 .filtre__bouton button{
-    background-color: var(--couleur3);
+    background-color: #fff;
     color: #000;
     border-radius: 5px;
     padding: 0.5em;
@@ -14,7 +14,7 @@
 
 
     &:hover{
-        background-color: var(--couleur2);
+        background-color: aquamarine;
         color: #000;
     }
 }
@@ -24,4 +24,7 @@
     flex-direction: column;
     gap: 15px;
     padding: 20px;
+}
+button[data-id='12']{
+    display: none;
 }
