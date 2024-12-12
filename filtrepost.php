@@ -18,7 +18,7 @@ function charger_scripts_css(){
         $version_css
     ) ;  
 
-    wp_enqueue_script( 
+    wp_enqueue_script(  
         "filtrepost",       
         plugin_dir_url(__FILE__) . "/js/filtrepost.js",
         array(),
@@ -40,4 +40,4 @@ function genere_boutons(){
     return '<div class="filtre__bouton">' . $contenu . '</div>';
 }
 
-add_shortcode('extraire_cours', 'genere_boutons');
+add_shortcode('extraire_categories', 'genere_boutons');
